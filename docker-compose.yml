@@ -6,6 +6,8 @@ services:
     tty: true
     environment:
       - WEB_DOCUMENT_ROOT=${WEB_DOCUMENT_ROOT}
+    ports:
+      - "8080:80"
     volumes:
       - ${API_DATA_DIR}:/app:delegated
       - ~/.ssh:/root/.ssh
